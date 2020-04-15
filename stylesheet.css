@@ -154,7 +154,7 @@ a:active {
     margin: 0 auto;
     padding: 10px 10px 10px 10px;
     margin: 10px;
-    width: auto;
+    max-width: 100%;
     height: auto;
     
 }
@@ -165,7 +165,7 @@ a:active {
     border: solid;
     border-color: white;
     margin: 10px;
-    width: auto;
+    max-width: 100%;
     height: auto;
 }
 
@@ -175,7 +175,7 @@ a:active {
     margin: 0 auto;
     padding: 10px 10px 10px 10px;
     margin: 10px;
-    width: auto;
+    max-width: 100%;
     height: auto;
 }
 
@@ -186,6 +186,8 @@ a:active {
     margin: 0 auto;
     padding: 10px 10px 10px 10px;
     margin: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
 
