@@ -154,6 +154,9 @@ a:active {
     margin: 0 auto;
     padding: 10px 10px 10px 10px;
     margin: 10px;
+    width: auto;
+    height: auto;
+    
 }
 
 #shelli{
@@ -162,6 +165,8 @@ a:active {
     border: solid;
     border-color: white;
     margin: 10px;
+    width: auto;
+    height: auto;
 }
 
 #steph{
@@ -170,6 +175,8 @@ a:active {
     margin: 0 auto;
     padding: 10px 10px 10px 10px;
     margin: 10px;
+    width: auto;
+    height: auto;
 }
 
 
