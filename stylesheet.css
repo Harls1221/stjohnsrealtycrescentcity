@@ -1,34 +1,217 @@
 body{
     
+    background-color: #0A0E11;
+    font-family: 'Marmelad', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
 
 li{
     list-style: none;
+    font-family: 'Marmelad', sans-serif;
 }
 
-nav{
+.header{
+    background-image: url(images/crescent_lake.jpg);
+    color: #020659;
     display: flex;
-    justify-content: center;
-    background-color: yellow ;
+    height: 490px;
+    width: 100%;
+    background-size: cover;
+    justify-content: space-between;
+    font-size: medium; 
+    
 }
+
+
+
+h3{
+    margin: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+
+
+
+.logo {
+    
+    min-width: 175px;
+    min-height: 175px;
+    max-width: 250px;
+    max-height: 100px;
+    margin: 10px;
+    
+     
+    }
 
 .nav-container{
     display: flex;
-    align-items: center;
-
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 10px;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #F2C744;
+    background-color: #0A0E11;
+    width: 100%;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    
+    
+    
     
     
 }
 
-img {
-    width: 300px;
-    height: 200px;
-}
+
 
 button{
     border-radius: 20%;
+    color: white;
+    background-color: blue;
+
     
 }
 
 
+.introduction{
+    background-color: #D9C5AD;
+    display: flex;
+    text-indent: 50px;
+    justify-content: space-around;
+    align-items: top;
+    font-size: 17px;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    color: #212625;
+    text-align: justify;
+    width: 100%;
+    
+    
+}
+.building_img {
+    
+    
+      
+}
+
+.introduction_text {
+    font-size: large;
+    font-family: 'Gotu','Barlow Condensed', sans-serif;
+    width: 500px;
+    quotes: "\201C""\201D""\2018""\2019";
+    padding: 10px 20px;
+    line-height: 1.5;
+    
+}
+
+a:link {
+    color: #F2C744;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #F2C744;
+    text-decoration: none;
+  
+}
+
+/* mouse over link */
+a:hover {
+  color: #F2C744;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #F2C744;
+  
+}
+
+
+.properties{
+    background-color: #D9C5AD;
+    margin-top: 25px;
+}   
+
+.agents{
+    margin-top: 25px;
+    background-color: #D9C5AD;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    font-family:'Gotu','Barlow Condensed', sans-serif;
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    
+}
+
+.amy{
+    border: solid;
+    border-color: white;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+    margin: 10px;
+}
+
+#shelli{
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+    border: solid;
+    border-color: white;
+    margin: 10px;
+}
+
+#steph{
+    border: solid;
+    border-color: white;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+    margin: 10px;
+}
+
+
+#lila{
+    border: solid;
+    border-color: white;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+    margin: 10px;
+}
+
+
+p{
+    padding: 10px 10px 10px 10px;;
+}
+
+.amy_bio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shelli_bio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.steph_bio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lila_bio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+p{
+    width: 75%;
+}
 
