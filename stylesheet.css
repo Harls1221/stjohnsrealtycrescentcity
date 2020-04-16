@@ -137,33 +137,30 @@ a:active {
     margin-top: 25px;
 }   
 
-.agents{
+#agents{
     margin-top: 25px;
     background-color: #D9C5AD;
     display: grid;
     grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
     font-family:'Gotu','Barlow Condensed', sans-serif;
     text-align: left;
     padding: 10px 10px 10px 10px;
     margin: 0 auto;
     max-width: 100%;
     height: auto;
+    overflow: hidden;
     
 }
 
 .agent_photo{
-    display: flex;
-    justify-content: center;
+    max-width: 100%;
     border: solid;
     border-color: white;
-    margin: 0 auto;
     padding: 10px 10px 10px 10px;
-    margin: 10px;
-    max-width: 100%;
-    height: auto;
-    
-}
+    margin: 0 auto;
 
+}
 
 
 
@@ -175,10 +172,21 @@ p{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 100%;
+    height: auto;
+    font-family:'Gotu','Barlow Condensed', sans-serif;
+    text-align: left;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 
-
+.agent_bio{
+    margin: 10px;
+    max-width: 75%;
+    height: auto;
+    
+}
 
 p{
     max-width: 75%;
