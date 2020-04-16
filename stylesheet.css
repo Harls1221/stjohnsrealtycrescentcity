@@ -145,10 +145,15 @@ a:active {
     font-family:'Gotu','Barlow Condensed', sans-serif;
     text-align: left;
     padding: 10px 10px 10px 10px;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
     
 }
 
 .agent_photo{
+    display: flex;
+    justify-content: center;
     border: solid;
     border-color: white;
     margin: 0 auto;
@@ -159,68 +164,44 @@ a:active {
     
 }
 
-#shelli{
-    margin: 0 auto;
-    padding: 10px 10px 10px 10px;
+#amy{
     border: solid;
     border-color: white;
-    margin: 10px;
-    max-width: 100%;
-    height: auto;
+}
+
+#shelli{
+    border: solid;
+    border-color: white;
+   
 }
 
 #steph{
     border: solid;
     border-color: white;
-    margin: 0 auto;
-    padding: 10px 10px 10px 10px;
-    margin: 10px;
-    max-width: 100%;
-    height: auto;
+    
 }
 
 
 #lila{
     border: solid;
     border-color: white;
-    margin: 0 auto;
-    padding: 10px 10px 10px 10px;
-    margin: 10px;
-    max-width: 100%;
-    height: auto;
 }
+
 
 
 p{
     padding: 10px 10px 10px 10px;;
 }
 
-.amy_bio{
+.bio{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.shelli_bio{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.steph_bio{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.lila_bio{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
 
 p{
     max-width: 75%;
 }
-
