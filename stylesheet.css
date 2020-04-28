@@ -196,15 +196,16 @@ p{
 
     #agents{
         display: block;
+        width: 100%;
     }
     .address{
         width: 50%;
     }
 
     .building_img{
-        width: 50%;
+        width: 100%;
         height: auto;
-        margin: 0 auto;
+        
     }
 
     .header{
@@ -223,10 +224,10 @@ p{
     }
 
     .introduction_text{
-        width: 60%;
+        width: 100%;
         height: auto;
         font-size: 12px;
-        margin: 0 auto;
+        
     }
     .logo{
         
