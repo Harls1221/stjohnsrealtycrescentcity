@@ -86,8 +86,8 @@ button{
 #contact{
     background-color: #D9C5AD;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     margin-top: 25px;
 }
 
@@ -164,6 +164,11 @@ a:active {
    grid-template-columns: repeat(4, 25%);
    grid-template-rows: 2; 
 }
+
+
+#properties{
+    
+}
 .properties{
     background-color: #D9C5AD;
     display: flex;
@@ -187,13 +192,13 @@ a:active {
 
 .agent_container{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: space-evenly;
     align-items: center;
-    margin: 0 auto;
     font-family:'Gotu','Barlow Condensed', sans-serif;
-     
-
+    width: 100%;
+    height: auto; 
+    padding: 15px;
     
 }
 
@@ -206,7 +211,7 @@ a:active {
     padding: 10px 10px 10px 10px;
     max-width: 100%;
     height: auto;
-    overflow-y: scroll;
+    
     
     
 }
@@ -225,6 +230,7 @@ a:active {
 
 #lila {
     margin: 0 auto;
+    
 }
 
 .agent_photo{
@@ -253,7 +259,7 @@ p{
 
 .agent_bio{
     margin: 0 auto;
-    max-width: 65%;
+    max-width: 75%;
     height: auto;
     text-align: left;
     text-align-last: left;
