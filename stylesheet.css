@@ -366,3 +366,13 @@ a:active {
     
     }
 }
+
+@media screen and (max-width: 480px){
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+        
+    }
+    }
