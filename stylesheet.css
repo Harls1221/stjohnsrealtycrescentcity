@@ -375,3 +375,13 @@ a:active {
     
 }
 }
+
+@media screen and (max-width: 700px){
+    .thumbnails figure img {     
+    display: flex;
+    flex-direction: column;
+    size: 1em;
+    
+    
+}
+}
