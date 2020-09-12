@@ -381,7 +381,8 @@ a:active {
     .thumbnails figure img {     
     display: flex;
     flex-direction: column;
-    size: 1em;
+    width: 80%;
+    height: auto;
     
     
 }
