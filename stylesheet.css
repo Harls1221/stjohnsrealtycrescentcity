@@ -178,7 +178,7 @@ iframe{
 .thumbnails{
     background-color:#618b96;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(.5fr));
+    grid-template-columns: repeat(3, .5fr);
     grid-template-rows: repeat(10, .5fr);
     justify-items: center;
     align-items: center;
