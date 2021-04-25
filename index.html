@@ -11,22 +11,25 @@
 </head>
 <body>
     
-      
+    <div class="container-main"> 
     <header id="home" class="header">
         <img class="logo" alt="logo" src="images/St.JohnsRealtylogotransparent.png">    
-            <div class="address">386-698-1000<br> 220 N. Summit St.<br> Crescent City, FL 32112</div>
-        
+            <div class="address">
+            
+            <a href="https://g.page/stjohnsrealty?share" target="_blank">386-698-1000<br> 220 N. Summit St.<br> Crescent City, FL 32112</a></div>
+             
     </header>
-    <nav>
+    <nav> 
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#agents">Agents</a></li>
             <li><a href="properties.html">Properties</a></li>
-            <li><a href="#contact"><button>Contact</button></a></li>  
+            <li><button onclick="btnContact()">Contact</button></li>
         </ul>
     </nav>
+    
 
-    <div class="introduction">
+    <div id="introduction">
             <p class="introduction_text">
                 At St. Johns Realty and Management, 
                 our goal is to provide knowledgeable 
@@ -46,15 +49,15 @@
             the shade of our ancient Oak Trees.</p>
         <figure>
             <img id="building_image"  alt="building" src="images/building.jpg">
-                <figcaption>St.Johns Realty & Management building</figcaption>
+                <figcaption class="building-caption">St.Johns Realty & Management building</figcaption>
         </figure>
     </div> 
-
-  
+   
     
-<div id="agents">
 
-    <figure>
+    
+    <div  class="agent" id="amy">
+    <figure id="Amy" class="agent_figure">
         <img class="agent_photo" alt="amy" src="images/amy+b&W.jpg">
             <figcaption>Amy Heath (386)559-7203</figcaption> 
                 <p class="agent_caption"> Amy Heath is a lifetime native to Crescent City. 
@@ -64,9 +67,10 @@
                 may have. </p>
             
     </figure>
+    </div>
                 
-
-    <figure>
+    <div id="shelli" class="agent">
+    <figure id="Shelli" class="agent_figure">
         <img class="agent_photo" alt="shelli" src="images/Shell+B&W.png">
             <figcaption>Shelli Ames (386)559-4848 </figcaption>
                 <p class="agent_caption"> Shelli moved to Florida in 2014 from Punxsutawney,
@@ -76,9 +80,10 @@
                 Spending time with her family is the activity she loves the most.
             </p>
     </figure>           
-                    
-                   
-    <figure>
+    </div> 
+
+    <div id="steph" class="agent">             
+    <figure id="Stephanie" class="agent_figure">
         <img class="agent_photo" alt="Stephanie" src="images/steph+B&W.jpg">
             <figcaption>Stephanie Kennedy (386)937-0075</figcaption>
                 <p class="agent_caption"> Stehania Kennedy epitomizes integrity, energy, hard work, 
@@ -87,59 +92,61 @@
                 </p>
             </figcaption>
     </figure>
-            
-    <figure>
+    </div>  
+    
+    <div id="lila" class="agent">
+    <figure id="Lila" class="agent_figure">
         <img class="agent_photo" alt="lila" src="images/Lila+crop+B&W.jpg">
             <figcaption>Lila Mayo (904)254-8425 </figcaption>
-                <p class="agent_caption"> Once a restauranteur on Amelia Island, then a massage 
-                therapist for ten years; In 2017 
+                <p class="agent_caption"> Once a restauranteur on Amelia Island, then a massage therapist for ten years; In 2017 
                 Lila and her husband chose to retire in Crescent City. She absolutely loves
                 South Putnam and wants to explore it with you and show you the natural beauty
                 of the area.
                 </p>
             
     </figure>
+    </div>
 
-    <figure>
+
+    <div id="harley" class="agent">
+    <figure id="Harley" class="agent_figure">
         <img class="agent_photo" alt="Harley" src="images/harley.jpg" width="155px" height="auto">
             <figcaption>Harley Strickland (386)559-3688 </figcaption>
                 <p class="agent_caption"> Harley has lived in Crescent City since she was 10 years old. 
                 Prior to joining the St. Johns Realty team Harley has 3 years 
-                experience in the Real Estate environment and over 5 years of 
-                providing high-quality administrative service. Harley is now a 
+                experience in the Real Estate environment.  Harley is now a 
                 licensed agent with St. Johns Realty & Management, LLC. and aspires 
-                to become a Web Developer in the future.  She enjoys travelling, 
-                reading, kayaking and music. 
+                to become a Web Developer in the future.
                  </p> 
             
     </figure>
+</div>
 
-</div>           
-
-        <div id="contact">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3475.066635800543!2d-81.51281868555928!3d29.426848782111207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e6f5fe7351ca7b%3A0x9362eceaec2a0f40!2s220%20Summit%20St%2C%20Crescent%20City%2C%20FL%2032112!5e0!3m2!1sen!2sus!4v1587664596686!5m2!1sen!2sus" width=100% height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            <p class="parking">Parking can be found next to, or behind our building.</p>
-            <h2 class="questions">Questions? Fill out the form below!</h2>
-            <div id="contact_form" class="form"> 
-                <form id="contact_form" method = "post" action="contact-form-handler.php">
-                    <label for="fname"></label>
-                    <input type="text" id="fname" name="fname" placeholder="Your first name" required><br><br>
-                    <label for="lname"></label>
-                    <input type="text" id="lname" name="lname" placeholder="Your last name"><br><br>
-                    <label for="email"></label>
-                    <input type="text" id="email" name="email" placeholder="Email" required><br><br>
-                    <label for="pnumber"></label>
-                    <input type="text" id="pnumber" name="pnumber" placeholder="Phone number"><br><br>
-                    <label for="text_box"></label>
-                    <textarea id="text_box" rows="4" cols="50" required></textarea>
-                    <input type="submit" value="Submit">
-                </form>
-                  
-
-            </div>
-            
+</div> 
+     
+        <div id="contactPopBackDrop" onclick="closeModal()">
+        
+            <form id="contactPop" method = "post" action="contact-form-handler.php">
+                <label for="fname"></label>
+                <input type="text" id="fname" name="fname" placeholder="Your first name" required><br><br>
+                <label for="lname"></label>
+                <input type="text" id="lname" name="lname" placeholder="Your last name"><br><br>
+                <label for="email"></label>
+                <input type="text" id="email" name="email" placeholder="Email" required><br><br>
+                <label for="pnumber"></label>
+                <input type="text" id="pnumber" name="pnumber" placeholder="Phone number"><br><br>
+                <label for="text_box"></label>
+                <textarea id="text_box" rows="4" cols="50" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        
         </div>
 
-          
+        <footer><h1>Footer</h1></footer> 
+<script src="script.js"></script>
+</script>
+
+</div>  
+  
 </body>
 </html>
