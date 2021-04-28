@@ -139,9 +139,15 @@ button{
     
 }
 
+#building_image{
+ width: 100%;
+ height: auto;
+}
+
 .building-caption{
      text-align: center;  
 }
+
 
 .agent{
     
