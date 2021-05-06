@@ -1,12 +1,12 @@
 html{
     box-sizing: border-box;
-    margin: 0 auto;
+
 }
 
 body {
-    margin: 0 auto;
+    margin: 0;
     background-color:#0A0E11;
-       
+    overflow-x: hidden;   
 }
 
 .container-main {
@@ -87,7 +87,8 @@ nav ul{
     justify-content: space-evenly;
     margin: auto;
     padding: 8px;
-    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     
     
 }
@@ -140,40 +141,63 @@ button{
 }
 
 #building_image{
- width: 100%;
- height: auto;
-}
+    width: 100%;
+    height: auto;
+   }
 
 .building-caption{
      text-align: center;  
 }
 
 
+
 .agent{
     
-    background-color: #618b96;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    
     font-family: 'Gotu','Barlow Condensed', sans-serif;
     font-weight: 150;
     font-kerning: 1em;
     color: #dfd5d5;
     line-height: 2em;
-    
-}
-
-
-
-.agent_figure{
-    padding: 10px;
-    width: 50%;
     text-align: center;
+    margin: 50px auto 20px auto;
+    
+        
+    
     
 }
 
-#amy{
+
+
+
+
+.agent_contact{
+    padding: 10px;
+    text-align: center;
+
     
+}
+
+.agent_caption{
+    max-width: 50%;
+    height: auto;
+    align-self: center;
+    margin: 0 auto auto auto;
+    
+}
+
+
+
+
+#amy{ 
     grid-area: amy;
+    
+    
+    
     
 }
 
@@ -210,8 +234,11 @@ button{
 
 
 footer{
-    background-color: #0ecdfd;
+    background-color: #0f151a;
+    color: white;
     grid-area: footer;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -259,8 +286,6 @@ a:active {
 
     }
 
-
-
 @media screen and (max-width: 1080px){
     div header{
         display: flex;
@@ -270,7 +295,7 @@ a:active {
     }
 }
 
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1000px){
     div header .logo{
         align-self: center;
         justify-self: center;
@@ -335,8 +360,12 @@ a:active {
     }
 }
 
-
-
+@media screen and (min-width: 500px){
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
 
 @media screen and (max-width: 600px){
     .agent_caption{
