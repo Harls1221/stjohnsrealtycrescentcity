@@ -6,6 +6,7 @@ html{
 body {
     margin: 0 auto;
     background-color:#0A0E11;
+
        
 }
 
@@ -208,6 +209,57 @@ button{
 }
 
 
+.container-main {
+    background-color: #618b96;
+    display: grid;
+    grid-template: 1fr .5fr repeat(6 1fr) / repeat(2, 1fr);
+    grid-template-areas: "header header"
+                         "nav nav"
+                         "section section"
+                         "amy amy"
+                         "steph shelli"
+                         "harley lila"
+                         "contactPop contactPop"
+                         "footer footer";
+   
+    
+}
+
+.container-main-prop-page {
+    background-color: #618b96;
+    display: grid;
+    grid-template: 1fr .5fr repeat(6 1fr) / repeat(2, 1fr);
+    grid-template-areas: "header header"
+                         "nav nav"
+                         "section section"
+                         "section section"
+                         "section section"
+                         "section section"
+                         "section section"
+                         "footer footer";
+   
+    
+}
+
+.thumbnails{
+    background-color: #618b96;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Gotu','Barlow Condensed', sans-serif;
+    font-weight: 150;
+    font-kerning: 1em;
+    color: #dfd5d5;
+    line-height: 2em;
+    
+}
+
+.property_photos{
+    width: 100%;
+    height: auto;
+}
+
+
 
 footer{
     background-color: #0ecdfd;
@@ -344,23 +396,25 @@ a:active {
 
     }
 }
-@media screen and (max-width: 700px){
-    .thumbnails {     
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    
-    
-}
-}
 
-@media screen and (max-width: 700px){
-    .thumbnails figure img {     
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    height: auto;
-    
-    
-}
+
+
+@media screen and (max-width: 1080px){
+    .container-main-prop-page {
+        grid-template: 1fr .5fr repeat(10 1fr) / 1;
+        grid-template-areas: "header"
+                             "nav"
+                             "section"
+                             "section"
+                             "section"
+                             "section"
+                             "section"
+                             "section"
+                             "section"
+                             "section"
+                             "section"
+                             'section'
+                             "footer";
+    }
+
 }
