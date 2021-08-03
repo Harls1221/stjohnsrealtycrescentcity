@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>St. Johns Realty & Management</title>
+    <title>St. Johns Realty & Management, LLC</title>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
@@ -13,68 +13,70 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+
 </head>
 
 <body>
-    <div class="container-main">
-        <header id="home" class="header">
-            <img class="logo" alt="logo" src="images/St.JohnsRealtylogotransparent.png" />
-            <div class="address">
-                <a href="https://g.page/stjohnsrealty?share" target="_blank">386-698-1000<br />
-                    220 N. Summit St.<br />
-                    Crescent City, FL 32112</a>
-            </div>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="properties.html">Properties</a></li>
-                <li>
-                    <button class="btn-contact" onclick="btnContact()">Contact</button>
-                    <div class="popupForm" id="contactPopBackDrop">
 
-                        <form class="form-container" method="post" action="contact-form-handler.php">
-                            <span class="close" onclick="closeModal()">&times;</span>
-                            <label for="fname"></label>
-                            <input type="text" id="fname" name="fname" placeholder="Your first name"
-                                required /><br /><br />
-                            <label for="lname"></label>
-                            <input type="text" id="lname" name="lname" placeholder="Your last name" /><br /><br />
-                            <label for="email"></label>
-                            <input type="text" id="email" name="email" placeholder="Email" required /><br /><br />
-                            <label for="pnumber"></label>
-                            <input type="text" id="pnumber" name="pnumber" placeholder="Phone number" /><br /><br />
-                            <label for="text_box"></label>
-                            <textarea id="text_box" rows="4" cols="50" required></textarea>
-                            <input type="submit" class="submit" value="Submit" />
-                        </form>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+    <header id="home" class="header">
+        <img class="logo" alt="logo" src="images/St.JohnsRealtylogotransparent.png" />
+        <a class="address" href="https://g.page/stjohnsrealty?share" target="_blank">386-698-1000<br />
+            220 N. Summit St.<br />
+            Crescent City, FL 32112</a>
 
-        <div id="introduction">
-            <p class="introduction_text">
-                At St. Johns Realty and Management, our goal is to provide
-                knowledgeable service to our customers whether they are a buyer,
-                seller, landlord or tenant. We provide each customer with the same
-                amount of respect no matter what their price point may be.<br />
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li>
+                <button class="btn-contact" onclick="btnContact()">Contact</button>
+                <div class="popupForm" id="contactPopBackDrop">
 
-                South Putnam County is our home, too. We raise our families here. We
-                look forward to meeting you and helping you and your family join our
-                community. Our area is full of culture, unlimited outdoor activities
-                for water enthusiasts and those who simply prefer to relax under the
-                shade of our ancient Oak Trees.
-            </p>
-            <figure>
-                <img id="building_image" alt="building" src="images/building.jpg" />
-                <figcaption class="building-caption">
-                    St.Johns Realty & Management building
-                </figcaption>
-            </figure>
-        </div>
+                    <form class="form-container" method="post" action="contact-form-handler.php">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <label for="fname"></label>
+                        <input type="text" id="fname" name="fname" placeholder="Your first name" required />
+                        <label for="lname"></label>
+                        <input type="text" id="lname" name="lname" placeholder="Your last name" />
+                        <label for="email"></label>
+                        <input type="text" id="email" name="email" placeholder="Email" required />
+                        <label for="pnumber"></label>
+                        <input type="text" id="pnumber" name="pnumber" placeholder="Phone number" />
+                        <label for="text_box"></label>
+                        <textarea id="text_box" rows="4" cols="50" required
+                            placeholder="How can we help you?"></textarea>
+                        <input type="submit" class="submit" value="Submit" />
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
 
-        <div id="amy" class="agent">
+    <div id="introduction">
+        <p class="introduction_text">
+            At St. Johns Realty and Management, our goal is to provide
+            knowledgeable service to our customers whether they are a buyer,
+            seller, landlord or tenant. We provide each customer with the same
+            amount of respect no matter what their price point may be.<br />
+
+            South Putnam County is our home, too. We raise our families here. We
+            look forward to meeting you and helping you and your family join our
+            community. Our area is full of culture, unlimited outdoor activities
+            for water enthusiasts and those who simply prefer to relax under the
+            shade of our ancient Oak Trees.
+        </p>
+        <figure>
+            <img id="building_image" alt="building" src="images/building.jpg" />
+            <figcaption class="building-caption">
+                St.Johns Realty & Management building
+            </figcaption>
+        </figure>
+    </div>
+
+    <!---Realtor Info-->
+    <div class="realtor__container">
+        <div class="realtor__card">
             <figure>
                 <img class="agent_photo" alt="amy" src="images/amy+b&W.jpg" />
                 <figcaption class="agent_contact">
@@ -91,9 +93,9 @@
             </p>
         </div>
 
-        <div id="shelli" class="agent">
+        <div class="realtor__card">
             <figure>
-                <img class="agent_photo" alt="shelli" src="images/Shell+B&W.png" />
+                <img class="agent_photo" alt="amy" src="images/Shell+B&W.png" />
                 <figcaption class="agent_contact">
                     Shelli Ames <br />
                     (386)559-4848
@@ -108,11 +110,11 @@
             </p>
         </div>
 
-        <div id="steph" class="agent">
+        <div class="realtor__card">
             <figure>
-                <img class="agent_photo" alt="Stephanie" src="images/steph+B&W.jpg" />
-                <figcaption>
-                    Stephanie Kennedy <br />
+                <img class="agent_photo" alt="amy" src="images/steph+B&W.jpg" />
+                <figcaption class="agent_contact">
+                    Stephania Kennedy <br />
                     (386)937-0075
                 </figcaption>
             </figure>
@@ -123,10 +125,13 @@
             </p>
         </div>
 
-        <div id="harley" class="agent">
+        <div class="realtor__card">
             <figure>
-                <img class="agent_photo" alt="Harley" src="images/harley_resized.jpg" />
-                <figcaption>Harley Strickland <br />(386)559-3688</figcaption>
+                <img class="agent_photo" alt="amy" src="images/harley_resized.jpg" />
+                <figcaption class="agent_contact">
+                    Harley Strickland <br />
+                    (386)559-3688
+                </figcaption>
             </figure>
             <p class="agent_caption">
                 Harley has lived in Crescent City since she was 10 years old. Prior to
@@ -135,9 +140,27 @@
                 St. Johns Realty & Management, LLC.
             </p>
         </div>
-    </div>
+        <!-------- Reserved for new agent or secretary---Replace Image and txt--------------------------------------------
+        <div class="realtor__card">
+            <figure>
+                <img class="agent_photo" alt="amy" src="images/harley_resized.jpg" />
+                <figcaption class="agent_contact">
+                    Harley Strickland <br />
+                    (386)559-3688
+                </figcaption>
+            </figure>
+            <p class="agent_caption">
+                Harley has lived in Crescent City since she was 10 years old. Prior to
+                joining St. Johns Realty & Management, Harley has 3 years experience
+                in the Real Estate environment and is now a licensed agent with
+                St. Johns Realty & Management, LLC.
+            </p>
+        </div>
+-------------------------------------------------------------------------------------------->
 
-    <footer>
+
+    <footer class="footer">
+
         <div class="social_links">
             &copy;St.Johns Realty & Management, LLC
             <a href="https://www.facebook.com/stjohnsrealty" class="social__icon--link" target="_blank"><i
@@ -148,6 +171,8 @@
 
 
     </footer>
+
+
     <script src="script.js"></script>
 </body>
 
