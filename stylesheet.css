@@ -759,5 +759,27 @@ Media Queries for properties page
     .price{
       font-size: 1em;
     }
-}
 
+  
+}
+/*
+@media screen and (max-width: 375px) {
+ .listings_container{
+      display: flex;
+      flex
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+ }
+
+ figure.property_card{
+   display: flex;
+   flex-direction: column;
+ }
+
+ .property_photos{
+   
+ }
+  
+}
