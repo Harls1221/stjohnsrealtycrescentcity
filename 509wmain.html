@@ -1,0 +1,117 @@
+<!--Created by: Harley Strickland--->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>St. Johns Realty & Management</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Gotu&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="listing_stylesheet.css" type="text/css" />
+</head>
+
+<body>
+    <header id="home" class="header">
+        <img class="logo" alt="logo" src="images/St.JohnsRealtylogotransparent.png" />
+        <div class="address">
+            <a href="https://g.page/stjohnsrealty?share" target="_blank">386-698-1000<br />
+                220 N. Summit St.<br />
+                Crescent City, FL 32112</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li>
+                <button class="btn-contact" onclick="btnContact()">Contact</button>
+                <div class="popupForm" id="contactPopBackDrop">
+
+                    <form class="form-container" method="post" action="contact-form-handler.php">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <label for="fname"></label>
+                        <input type="text" id="fname" name="fname" placeholder="Your first name" required /><br /><br />
+                        <label for="lname"></label>
+                        <input type="text" id="lname" name="lname" placeholder="Your last name" /><br /><br />
+                        <label for="email"></label>
+                        <input type="text" id="email" name="email" placeholder="Email" required /><br /><br />
+                        <label for="pnumber"></label>
+                        <input type="text" id="pnumber" name="pnumber" placeholder="Phone number" /><br /><br />
+                        <label for="text_box"></label>
+                        <textarea id="text_box" rows="4" cols="50" required></textarea>
+                        <input type="submit" class="submit" value="Submit" />
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!---Listing informataion HTML-->
+
+    <div class="listing_info">
+        <figure class="listing_hero_img">
+            <a href="105wmain.html"><img class="property_photos" alt="245_Old_HWY_17"
+                    src="images/property_photos/509_w_main/509_W_MAIN_1.jpg"></a>
+            <figcaption class="property_address">509 W. Main St. Pomona Park, FL 32181 <br><span
+                    class="price">$89,000</span></figcaption>
+        </figure>
+        <p class="listing_description">Old Florida Historic Mansion! Beautiful Prairie Style Brick Home,5
+            Bedrooms, 6 Baths(one on screened
+            porch), inlaid
+            parquet floors, marble & tile floors, coffered ceilings. Custom kitchen with his &her sinks & a
+            stove to die for, open
+            and screened porches, built in glass cabinets, 171' on Spring Fed ''Lake Stella'' attic and basement
+            approx. 5,500 under
+            roof</p>
+    </div>
+
+    <div class="listing_images-container">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_2.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_3.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_4.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_6.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_7.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_8.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_9.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_10.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_11.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_12.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_13.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_14.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_15.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_16.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_17.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_18.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_19.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_20.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_22.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_23.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_24.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_25.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/509_w_main/509_W_MAIN_26.jpg" alt="">
+
+    </div>
+
+
+
+    <footer class="footer">
+
+        <div class="social_links">
+            &copy;St.Johns Realty & Management, LLC
+            <a href="https://www.facebook.com/stjohnsrealty" class="social__icon--link" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/st.johnsrealty" class="social__icon--link" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>

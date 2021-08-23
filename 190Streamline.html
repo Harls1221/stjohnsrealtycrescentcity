@@ -1,0 +1,133 @@
+<!--Created by: Harley Strickland--->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>St. Johns Realty & Management</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Gotu&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="listing_stylesheet.css" type="text/css" />
+</head>
+
+<body>
+    <header id="home" class="header">
+        <img class="logo" alt="logo" src="images/St.JohnsRealtylogotransparent.png" />
+        <div class="address">
+            <a href="https://g.page/stjohnsrealty?share" target="_blank">386-698-1000<br />
+                220 N. Summit St.<br />
+                Crescent City, FL 32112</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li>
+                <button class="btn-contact" onclick="btnContact()">Contact</button>
+                <div class="popupForm" id="contactPopBackDrop">
+
+                    <form class="form-container" method="post" action="contact-form-handler.php">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <label for="fname"></label>
+                        <input type="text" id="fname" name="fname" placeholder="Your first name" required />
+                        <label for="lname"></label>
+                        <input type="text" id="lname" name="lname" placeholder="Your last name" />
+                        <label for="email"></label>
+                        <input type="text" id="email" name="email" placeholder="Email" required />
+                        <label for="pnumber"></label>
+                        <input type="text" id="pnumber" name="pnumber" placeholder="Phone number" />
+                        <label for="text_box"></label>
+                        <textarea id="text_box" rows="4" cols="50" required
+                            placeholder="How can we help you?"></textarea>
+                        <input type="submit" class="submit" value="Submit" />
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!---Listing informataion HTML-->
+
+    <div class="listing_info">
+        <figure class="listing_hero_img">
+            <a href="190Streamline.html"><img class="property_photos" alt="190_Streamline_Rd"
+                    src="images/property_photos/190 Streamline/190_streamline_1.JPG"></a>
+            <figcaption>190 Streamline Rd. Crescent City, FL 32112<br><span class="price">$399,900</span></figcaption>
+        </figure>
+
+        <p class="listing_description">LOOKING TO LIVE OFF YOUR LAND? Nearly 40 acres of privacy! 2005 Homes of Merit
+            has 3 beds/2 baths, eat-in kitchen,
+            indoor laundry room and built-in entertainment center. Approx 4 acres of irrigated land supplied by a large
+            well powered
+            with diesel motors. Pole barn for parking toys or tractors. Peaceful pond in the back yard provides lovely
+            view. Rumor
+            has it this pond was once stocked with fish! Approx 30 acres fenced for cattle. Lots of trees for shade.
+            Crescent City
+            is the Bass Fishing capital with many fresh water lakes and the nearby St. Johns River. Many possibilities
+            with this
+            property.
+            Private Remarks: May need 4X4 to access property. Please contact listing agent.</p>
+    </div>
+
+    <div class="listing_images-container">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline2.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline3.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline4.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline5.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline6.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline7.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline8.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline9.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline11.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline12.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline13.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline14.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline15.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline16.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline17.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline18.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline19.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline20.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline21.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline22.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline23.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline24.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline25.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline26.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline27.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline28.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline29.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline30.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline31.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline32.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline33.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline34.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline35.JPG" alt="">
+
+
+
+    </div>
+
+
+
+    <footer class="footer">
+
+        <div class="social_links">
+            &copy;St.Johns Realty & Management, LLC
+            <a href="https://www.facebook.com/stjohnsrealty" class="social__icon--link" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/st.johnsrealty" class="social__icon--link" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+
+
+    </footer>
+    <script src="script.js"></script>
+</body>
