@@ -33,19 +33,45 @@
                 <button class="btn-contact" onclick="btnContact()">Contact</button>
                 <div class="popupForm" id="contactPopBackDrop">
 
-                    <form class="form-container" method="post" action="contact-form-handler.php">
+                    <form class="form-container" id="contact_form" method="post"
+                        action="https://formspree.io/f/mzbyypvo">
                         <span class="close" onclick="closeModal()">&times;</span>
                         <label for="fname"></label>
-                        <input type="text" id="fname" name="fname" placeholder="Your first name" required /><br /><br />
+                        <input type="text" id="fname" name="fname" placeholder="Your first name" required />
                         <label for="lname"></label>
-                        <input type="text" id="lname" name="lname" placeholder="Your last name" /><br /><br />
+                        <input type="text" id="lname" name="lname" placeholder="Your last name" />
                         <label for="email"></label>
-                        <input type="text" id="email" name="email" placeholder="Email" required /><br /><br />
+                        <input type="text" id="email" name="_replyto" placeholder="Email" required />
                         <label for="pnumber"></label>
-                        <input type="text" id="pnumber" name="pnumber" placeholder="Phone number" /><br /><br />
+                        <input type="text" id="pnumber" name="pnumber" placeholder="Phone number" />
                         <label for="text_box"></label>
-                        <textarea id="text_box" rows="4" cols="50" required></textarea>
-                        <input type="submit" class="submit" value="Submit" />
+                        <textarea id="text_box" name="message" rows="4" cols="50" required
+                            placeholder="How can we help you?"></textarea>
+                        <button id="submit_btn">Submit</button>
+                        <script>
+                            var form = document.getElementById("contact_form");
+                            form.addEventListener('submit', handleSubmit)
+
+                            async function handleSubmit(event) {
+                                event.preventDefault();
+                                var data = new FormData(event.target);
+                                fetch(event.target.action, {
+                                    method: form.method,
+                                    body: data,
+                                    headers: {
+                                        'Accept': 'application/json'
+                                    }
+                                }).then(response => {
+
+                                    form.reset()
+                                }).catch(error => {
+
+                                });
+                            }
+
+                            form.addEventListener("submit", handleSubmit);
+
+                        </script>
                     </form>
                 </div>
             </li>
@@ -57,7 +83,7 @@
     <div class="listing_info">
         <figure class="listing_hero_img">
             <a href="102SMain.html"><img class="property_photos" alt="245_Old_HWY_17"
-                    src="images/property_photos/102_S_MAIN/102SMain_7.jpg"></a>
+                    src="images/property_photos/102_s_main/102SMain_7.jpg"></a>
             <figcaption class="property_address">102 S. Main St. Crescent City,FL 32112 <br><span
                     class="price">$650,000</span></figcaption>
         </figure>
@@ -72,21 +98,22 @@
     </div>
 
     <div class="listing_images-container">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_4.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_5.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_6.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_7.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_8.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_9.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_10.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_10.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_11.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_12.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_13.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_14.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_15.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_16.jpg" alt="">
-        <img class="listing_img" src="images/property_photos/102_S_MAIN/102SMain_17.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_4.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_6.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_5.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_5.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_7.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_8.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_9.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_10.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_10.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_11.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_12.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_13.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_14.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_15.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_16.jpg" alt="">
+        <img class="listing_img" src="images/property_photos/102_s_main/102SMain_17.jpg" alt="">
 
     </div>
 
