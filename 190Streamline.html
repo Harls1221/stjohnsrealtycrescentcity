@@ -33,20 +33,45 @@
                 <button class="btn-contact" onclick="btnContact()">Contact</button>
                 <div class="popupForm" id="contactPopBackDrop">
 
-                    <form class="form-container" method="post" action="contact-form-handler.php">
+                    <form class="form-container" id="contact_form" method="post"
+                        action="https://formspree.io/f/mzbyypvo">
                         <span class="close" onclick="closeModal()">&times;</span>
                         <label for="fname"></label>
                         <input type="text" id="fname" name="fname" placeholder="Your first name" required />
                         <label for="lname"></label>
                         <input type="text" id="lname" name="lname" placeholder="Your last name" />
                         <label for="email"></label>
-                        <input type="text" id="email" name="email" placeholder="Email" required />
+                        <input type="text" id="email" name="_replyto" placeholder="Email" required />
                         <label for="pnumber"></label>
                         <input type="text" id="pnumber" name="pnumber" placeholder="Phone number" />
                         <label for="text_box"></label>
-                        <textarea id="text_box" rows="4" cols="50" required
+                        <textarea id="text_box" name="message" rows="4" cols="50" required
                             placeholder="How can we help you?"></textarea>
-                        <input type="submit" class="submit" value="Submit" />
+                        <button id="submit_btn">Submit</button>
+                        <script>
+                            var form = document.getElementById("contact_form");
+                            form.addEventListener('submit', handleSubmit)
+
+                            async function handleSubmit(event) {
+                                event.preventDefault();
+                                var data = new FormData(event.target);
+                                fetch(event.target.action, {
+                                    method: form.method,
+                                    body: data,
+                                    headers: {
+                                        'Accept': 'application/json'
+                                    }
+                                }).then(response => {
+
+                                    form.reset()
+                                }).catch(error => {
+
+                                });
+                            }
+
+                            form.addEventListener("submit", handleSubmit);
+
+                        </script>
                     </form>
                 </div>
             </li>
@@ -57,8 +82,8 @@
 
     <div class="listing_info">
         <figure class="listing_hero_img">
-            <a href="190Streamline.html"><img class="property_photos" alt="190_Streamline_Rd"
-                    src="images/property_photos/190 Streamline/190_streamline_1.JPG"></a>
+            <a href="190streamline.html"><img class="property_photos" alt="190_Streamline_Rd"
+                    src="images/property_photos/190streamline/190_streamline_1.JPG"></a>
             <figcaption>190 Streamline Rd. Crescent City, FL 32112<br><span class="price">$399,900</span></figcaption>
         </figure>
 
@@ -77,39 +102,39 @@
     </div>
 
     <div class="listing_images-container">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline2.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline3.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline4.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline5.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline6.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline7.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline8.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline9.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline11.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline12.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline13.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline14.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline15.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline16.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline17.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline18.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline19.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline20.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline21.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline22.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline23.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline24.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline25.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline26.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline27.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline28.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline29.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline30.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline31.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline32.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline33.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline34.JPG" alt="">
-        <img class="listing_img" src="images/property_photos/190 Streamline/190_streamline35.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline3.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline2.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline4.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline5.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline6.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline7.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline8.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline9.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline11.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline12.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline13.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline14.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline15.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline16.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline17.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline18.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline19.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline20.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline21.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline22.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline23.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline24.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline25.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline26.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline27.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline28.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline29.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline30.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline31.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline32.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline33.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline34.JPG" alt="">
+        <img class="listing_img" src="images/property_photos/190streamline/190_streamline35.JPG" alt="">
 
 
 
