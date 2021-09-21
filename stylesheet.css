@@ -10,435 +10,287 @@ body {
 
 /*-------Hero Image------------------------------------------*/
 
+.header {
+  background-image: url(images/crescent_lake.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 450px;
+  font-size: 2em;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.logo {
+  padding: 30px;
+  height: 200px;
+}
+
+/*-----------Nav CSS---------------------------------------*/
+
+nav {
+  box-shadow: 0px 0px 20px rgb(24, 23, 23);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */
+}
+
+nav ul {
+  background-color: #0f151a;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  padding: 8px;
+  position: sticky;
+}
+
+nav ul li {
+  color: #f2c744;
+  list-style-type: none;
+  padding: 8px;
+  font-size: 1.5em;
+  font-family: "Marmelad", sans-serif;
+  margin: 0 auto;
+}
+.btn-contact {
+  border-radius: 20%;
+  color: white;
+  background-color: rgb(128, 128, 206);
+}
+/*----------------Form CSS---------------------------------*/
+
+.popupForm {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.form-container {
+  background-color: #dfd5d5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 50px;
+  border: 5px solid #888;
+}
+
+.close {
+  cursor: pointer;
+  color: black;
+  font-size: 1.5em;
+}
+
+input {
+  width: 50%;
+  height: 25px;
+  text-align: center;
+  font-size: 1em;
+  background-color: #0f151a;
+}
+
+.submit {
+  background-color: #618b96;
+  width: 10%;
+  border-radius: 20%;
+  font-family: "Marmelad", sans-serif;
+  margin: 20px 0px;
+  font-size: 1em;
+}
+
+#textbox {
+  height: 100px;
+  background-color: #646366;
+  font-size: 1em;
+}
+
+/*------------Introduction----------------------------------*/
+
+#introduction {
+  background-color: #646366;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+  height: auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  height: auto;
+  justify-content: space-evenly;
+  text-align: justify;
+  width: 100%;
+  color: #dfd5d5;
+  line-height: 2.5em;
+  font-size: 1.1em;
+  box-shadow: 0px 0px 15px rgb(24, 23, 23);
+}
+
+.introduction_text {
+  align-self: center;
+  width: 30%;
+  height: auto;
+}
+
+#building_image {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 15px rgb(24, 23, 23);
+}
+
+.building-caption {
+  text-align: center;
+}
+
+/*----------Realtors Container CSS------------------------*/
+
+.realtor__container {
+  background-color: #618b96;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px auto;
+}
+
+.realtor__card {
+  background-color: #618b96;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Gotu", "Barlow Condensed", sans-serif;
+  font-weight: 150;
+  font-kerning: 1em;
+  color: #dfd5d5;
+  line-height: 2em;
+  text-align: center;
+  width: 60%;
+  height: auto;
+  margin: 20px auto 10px auto;
+  font-size: 1.2em;
+}
+
+.agent_photo {
+  border: solid white 2px;
+  padding: 12px;
+  box-shadow: 0px 0px 15px rgb(24, 23, 23);
+}
+
+/*--------------FOOTER CSS-------------------------*/
+footer {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  color: white;
+  background-color: #0a0e11;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 0px 10px rgb(31, 31, 31);
+}
+
+.social_links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  height: auto;
+  font-size: 1.2em;
+}
+
+.social__icon--link {
+  color: #f2c744;
+}
+
+/*-------------Link Styles-----------------------------*/
+a.address:link {
+  color: rgb(11, 11, 32);
+}
+a.address:visited {
+  color: #f2c744;
+  text-decoration: none;
+}
+
+a:link {
+  color: #f2c744;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #f2c744;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #f2c744;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #f2c744;
+}
+
+/*-------- New Media queries---------------------------*/
+
+@media screen and (max-width: 320px) {
   .header {
-    background-image: url(images/crescent_lake.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 450px;
-    font-size: 2em;
-    text-align: center;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    text-align: center;
-    font-weight: bold;
+    font-size: 1.3em;
   }
-
   .logo {
-    padding: 30px;
-    height: 200px;
-  }
-
-  /*-----------Nav CSS---------------------------------------*/
-
-  nav {
-    box-shadow: 0px 0px 20px rgb(24, 23, 23);
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0; /* required */
-  }
-
-  nav ul {
-    background-color: #0f151a;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-    padding: 8px;
-    position: sticky;
-  }
-
-  nav ul li {
-    color: #f2c744;
-    list-style-type: none;
-    padding: 8px;
-    font-size: 1.5em;
-    font-family: "Marmelad", sans-serif;
-    margin: 0 auto;
-  }
-  .btn-contact {
-    border-radius: 20%;
-    color: white;
-    background-color: rgb(128, 128, 206);
-  }
-  /*----------------Form CSS---------------------------------*/
-
-  .popupForm {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-    
-  }
-
-  .form-container {
-    background-color: #dfd5d5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding: 50px;
-    border: 5px solid #888;
-  }
-
-  .close {
-    cursor: pointer;
-    color: black;
-    font-size: 1.5em;
-  }
-
-  input {
-    width: 50%;
-    height: 25px;
-    text-align: center;
-    font-size: 1em;
-    background-color: #0f151a;
-    
-  }
-
-  .submit {
-    background-color: #618b96;
-    width: 10%;
-    border-radius: 20%;
-    font-family: "Marmelad", sans-serif;
-    margin: 20px 0px;
-    font-size: 1em;
-  }
-
-  #textbox {
-    height: 100px;
-    background-color: #646366;
-    font-size: 1em;
-  }
-
-  /*------------Introduction----------------------------------*/
-
-  #introduction {
-    background-color: #646366;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-    width: 100%;
-    height: auto;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    height: auto;
-    justify-content: space-evenly;
-    text-align: justify;
-    width: 100%;
-    color: #dfd5d5;
-    line-height: 2.5em;
-    font-size: 1.1em;
-    box-shadow: 0px 0px 15px rgb(24, 23, 23);
-  }
-
-  .introduction_text {
-    align-self: center;
-    width: 30%;
+    width: 80%;
     height: auto;
   }
 
   #building_image {
-    width: 100%;
-    height: auto;
-    box-shadow: 0px 0px 15px rgb(24, 23, 23);
+    height: 75%;
   }
-
-  .building-caption {
-    text-align: center;
+  .introduction_text {
+    display: none;
   }
-
-  /*----------Realtors Container CSS------------------------*/
-
   .realtor__container {
-    background-color: #618b96;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 30px auto;
-  }
-
-  .realtor__card {
     background-color: #618b96;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Gotu", "Barlow Condensed", sans-serif;
-    font-weight: 150;
-    font-kerning: 1em;
-    color: #dfd5d5;
-    line-height: 2em;
     text-align: center;
-    width: 60%;
-    height: auto;
-    margin: 20px auto 10px auto;
-    font-size: 1.2em;
+  }
+  .realtor__card {
+    font-size: 1em;
+  }
+  .agent_caption {
+    display: none;
   }
 
-  .agent_photo {
-    border: solid white 2px;
-    padding: 12px;
-    box-shadow: 0px 0px 15px rgb(24, 23, 23);
-  }
-
-
-
-
-/*--------------FOOTER CSS-------------------------*/
-  footer {
+  .footer {
     display: flex;
-    justify-content: center;
-    height: 100px;
-    color: white;
-    background-color: #0a0e11;
-    width: 100%;
-    position: relative;
-    box-shadow: 0px 0px 10px rgb(31, 31, 31);
+    font-size: 12px;
+    height: 50px;
+    justify-content: space-evenly;
   }
 
   .social_links {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 40%;
-    height: auto;
-    font-size: 1.2em;
   }
 
-  .social__icon--link {
-    color: #f2c744;
-  }
-
-  /*-------------Link Styles-----------------------------*/
-  a.address:link {
-    color: rgb(11, 11, 32);
-  }
-  a.address:visited {
-    color: #f2c744;
-    text-decoration: none;
-  }
-
-  a:link {
-    color: #f2c744;
-    text-decoration: none;
-  }
-
-  /* visited link */
-  a:visited {
-    color: #f2c744;
-    text-decoration: none;
-  }
-
-  /* mouse over link */
-  a:hover {
-    color: #f2c744;
-    text-decoration: none;
-  }
-
-  /* selected link */
-  a:active {
-    color: #f2c744;
-  }
-
-  /*-------- New Media queries---------------------------*/
-
-  @media screen and (max-width: 320px) {
-    .header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.3em;
-    }
-    .logo {
-      width: 80%;
-      height: auto;
-    }
-
-    #building_image {
-      height: 75%;
-    }
-    .introduction_text {
-      display: none;
-    }
-    .realtor__container {
-      background-color: #618b96;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .realtor__card {
-      font-size: 1em;
-    }
-    .agent_caption {
-      display: none;
-    }
-
-    .footer {
-      display: flex;
-      font-size: 12px;
-      height: 50px;
-      justify-content: space-evenly;
-    }
-
-    .social_links {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    /* media queries for pop up window at max-width: 320px*/
-
-    .form-container {
-      background-color: #fff;
-    }
-
-    input {
-      color: white;
-      margin: 10px;
-      width: 100%;
-    }
-
-    #text_box {
-      width: 100%;
-      height: 200px;
-      background-color: rgb(243, 240, 240);
-    }
-
-    input.submit {
-      width: 50%;
-      font-size: 0.7em;
-    }
-
-    .close {
-    }
-  }
-
-  @media screen and (max-width: 375px) {
-    .header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.5em;
-    }
-
-    .logo {
-      width: 75%;
-      height: auto;
-    }
-
-    #building_image {
-      height: 75%;
-    }
-    .introduction_text {
-      display: none;
-    }
-    .realtor__container {
-      background-color: #618b96;
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .realtor__card {
-      font-size: 1em;
-    }
-    .agent_caption {
-      display: none;
-    }
-
-    .footer {
-      display: flex;
-      font-size: 12px;
-      height: 50px;
-      justify-content: space-evenly;
-    }
-
-    .social_links {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    /*media queries for Form Container*/
-    .form-container {
-      background-color: #fff;
-      width: 79%;
-      height: 450px;
-    }
-
-    input {
-      color: white;
-      margin: 10px;
-      width: 100%;
-    }
-
-    #text_box {
-      width: 100%;
-      height: 200px;
-    }
-
-    input.submit {
-      width: 50%;
-      font-size: 0.7em;
-    }
-  }
-
-  @media screen and (max-width: 414px) {
-    .header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.3em;
-    }
-    .logo {
-      width: 80%;
-      height: auto;
-    }
-
-    #building_image {
-      height: 75%;
-    }
-    .introduction_text {
-      display: none;
-    }
-    .realtor__container {
-      background-color: #618b96;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .realtor__card {
-      font-size: 1em;
-    }
-    .agent_caption {
-      display: none;
-    }
-
-    .footer {
-      display: flex;
-      font-size: 12px;
-      height: 50px;
-      justify-content: space-evenly;
-    }
-
-    .social_links {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
   /* media queries for pop up window at max-width: 320px*/
 
   .form-container {
@@ -463,6 +315,147 @@ body {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+  }
+
+  .logo {
+    width: 75%;
+    height: auto;
+  }
+
+  #building_image {
+    height: 75%;
+  }
+  .introduction_text {
+    display: none;
+  }
+  .realtor__container {
+    background-color: #618b96;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .realtor__card {
+    font-size: 1em;
+  }
+  .agent_caption {
+    display: none;
+  }
+
+  .footer {
+    display: flex;
+    font-size: 12px;
+    height: 50px;
+    justify-content: space-around;
+  }
+
+  div.social_links,
+  i {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /*media queries for Form Container*/
+  .form-container {
+    background-color: #fff;
+    width: 79%;
+    height: 450px;
+  }
+
+  input {
+    color: white;
+    margin: 10px;
+    width: 100%;
+  }
+
+  #text_box {
+    width: 100%;
+    height: 200px;
+  }
+
+  input.submit {
+    width: 50%;
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+  }
+  .logo {
+    width: 80%;
+    height: auto;
+  }
+
+  #building_image {
+    height: 75%;
+  }
+  .introduction_text {
+    display: none;
+  }
+  .realtor__container {
+    background-color: #618b96;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .realtor__card {
+    font-size: 1em;
+  }
+  .agent_caption {
+    display: none;
+  }
+
+  .footer {
+    display: flex;
+    font-size: 12px;
+    height: 50px;
+    justify-content: space-evenly;
+  }
+
+  .social_links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* media queries for pop up window at max-width: 414px*/
+
+  .form-container {
+    background-color: #fff;
+  }
+
+  input {
+    color: white;
+    margin: 10px;
+    width: 100%;
+  }
+
+  #text_box {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(243, 240, 240);
+  }
+
+  input.submit {
+    width: 50%;
+    font-size: 0.7em;
+  }
+}
+/*---------STOPPED 9/20/2021 MEDIA QUERY ISSUES---------
 @media screen and (max-width: 1024px) {
   .header {
     display: flex;
@@ -524,7 +517,7 @@ body {
     justify-content: space-between;
   }
 
-  /*media queries for Form Container*/
+  /*media queries for Form Container*/ /*
   .form-container {
     background-color: #fff;
     align-self: center;
@@ -554,235 +547,207 @@ body {
         Properties Page CSS
 ------------------------------*/
 
-div.listings_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 30px auto;
-     
-    
-    
+div.listings_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 30px auto;
 }
 
-figure.property_card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Gotu", "Barlow Condensed", sans-serif;
-    color: #dfd5d5;
-    line-height: 1.5em;
-    text-align: center;
-    width: 60%;
-    height: auto;
-    margin: 20px auto 10px auto;
-    font-size: 1.2em;
-
+figure.property_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Gotu", "Barlow Condensed", sans-serif;
+  color: #dfd5d5;
+  line-height: 1.5em;
+  text-align: center;
+  width: 60%;
+  height: auto;
+  margin: 20px auto 10px auto;
+  font-size: 1.2em;
 }
 
-.property_photos{
+.property_photos {
   border: solid white 2px;
-    padding: 12px;
-    box-shadow: 0px 0px 15px rgb(24, 23, 23);
-
+  padding: 12px;
+  box-shadow: 0px 0px 15px rgb(24, 23, 23);
 }
 
-span.price{
+span.price {
   font-weight: bold;
 }
 
 /*---------------
-Media Queries for properties page
+Media Queries for properties page---------Cant make center images on smaller screen sizes-----
 -----------------*/
 
-
-@media screen and (max-width:320px) {
+@media screen and (max-width: 320px) {
   div.listings_container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .property_photos {
+    width: 100%;
+  }
 
-    figure.property_card{
-      width: 100%;
-      height: auto;
-      font-size: 1em;
-    }
-    .property_photos{
-      width: 80%;
-      align-self: center;
-    }
+  figure.property_card {
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+  }
 
-    .property_address{
-      width: 80%;
-    }
+  .property_photos {
+    width: 80%;
+    align-self: center;
+  }
 
-    .price{
-      font-size: 1em;
-    }
+  .property_address {
+    width: 80%;
+  }
+
+  .price {
+    font-size: 1em;
+  }
 }
 
-@media screen and (max-width:375px) {
-  div.listings_container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    figure.property_card{
-      width: 100%;
-      height: auto;
-      font-size: 1em;
-    }
-    .property_photos{
-      width: 80%;
-      align-self: center;
-    }
-
-    .property_address{
-      width: 80%;
-    }
-
-    .price{
-      font-size: 1em;
-    }
-
-  
-}
-
-@media screen and (max-width:414px) {
-  div.listings_container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    figure.property_card{
-      width: 100%;
-      height: auto;
-      font-size: 1em;
-    }
-    .property_photos{
-      width: 80%;
-      align-self: center;
-    }
-
-    .property_address{
-      width: 80%;
-    }
-
-    .price{
-      font-size: 1em;
-    }
-
-  
-}
-
-@media screen and (max-width:768px) {
-  div.listings_container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      justify-content: center;
-    }
-
-    figure.property_card{
-      width: 100%;
-      height: auto;
-      font-size: 1em;
-    }
-    .property_photos{
-      width: 80%;
-      align-self: center;
-    }
-
-    .property_address{
-      width: 80%;
-    }
-
-    .price{
-      font-size: 1em;
-    }
-
-  
-}
-
-@media screen and (max-width:1024px) {
-  div.listings_container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      justify-content: center;
-    }
-
-    figure.property_card{
-      width: 100%;
-      height: auto;
-      font-size: 1em;
-    }
-    .property_photos{
-      width: 80%;
-      align-self: center;
-    }
-
-    .property_address{
-      width: 80%;
-    }
-
-    .price{
-      font-size: 1em;
-    }
-
-  
-}
-
-@media screen and (max-width:1038px) {
-  div.listings_container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      justify-content: center;
-    }
-
-    figure.property_card{
-      width: 100%;
-      height: auto;
-      font-size: 1em;
-    }
-    .property_photos{
-      width: 80%;
-      align-self: center;
-    }
-
-    .property_address{
-      width: 80%;
-    }
-
-    .price{
-      font-size: 1em;
-    }
-
-  
-}
-/*
 @media screen and (max-width: 375px) {
- .listings_container{
-      display: flex;
-      flex
-      flex-direction: column;
-      align-content: center;
-      align-items: center;
-      text-align: center;
- }
+  div.listings_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
- figure.property_card{
-   display: flex;
-   flex-direction: column;
- }
+  figure.property_card {
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+  }
 
- .property_photos{
-   
- }
-  
+  .property_photos {
+    width: 80%;
+    align-self: center;
+  }
+
+  .property_address {
+    width: 80%;
+  }
+
+  .price {
+    font-size: 1em;
+  }
+}
+/*------Find out how to media query for horizontal-landscape orientation*/
+@media screen and (max-width: 414px) {
+  div.listings_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  figure.property_card {
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+  }
+
+  .property_photos {
+    width: 80%;
+    align-self: center;
+  }
+
+  .property_address {
+    width: 80%;
+  }
+
+  .price {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  div.listings_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  figure.property_card {
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+  }
+
+  .property_photos {
+    width: 80%;
+    align-self: center;
+  }
+
+  .property_address {
+    width: 80%;
+  }
+
+  .price {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  div.listings_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  figure.property_card {
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+  }
+
+  .property_photos {
+    width: 80%;
+    align-self: center;
+  }
+
+  .property_address {
+    width: 80%;
+  }
+
+  .price {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1038px) {
+  div.listings_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  figure.property_card {
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+  }
+  .property_photos {
+    width: 80%;
+    align-self: center;
+  }
+
+  .property_address {
+    width: 80%;
+  }
+
+  .price {
+    font-size: 1em;
+  }
 }
