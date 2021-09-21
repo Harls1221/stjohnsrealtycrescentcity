@@ -387,7 +387,7 @@ a:active {
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -455,8 +455,9 @@ a:active {
     font-size: 0.7em;
   }
 }
-/*---------STOPPED 9/20/2021 MEDIA QUERY ISSUES---------
-@media screen and (max-width: 1024px) {
+/*---------MEDIA QUERY ISSUES---------*/
+/*---------Form does not center when contact button is pressed-------*/
+@media screen and (min-width: 1024px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -517,7 +518,8 @@ a:active {
     justify-content: space-between;
   }
 
-  /*media queries for Form Container*/ /*
+  /*media queries for Form Container at Min Width 1024px*/
+
   .form-container {
     background-color: #fff;
     align-self: center;
@@ -538,10 +540,27 @@ a:active {
     width: 50%;
     font-size: 0.7em;
   }
+  .form-container {
+    background-color: #fff;
+  }
+
+  input {
+    color: white;
+    margin: 10px;
+    width: 100%;
+  }
+
+  #text_box {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(243, 240, 240);
+  }
+
+  input.submit {
+    width: 50%;
+    font-size: 0.7em;
+  }
 }
-
-
-
 
 /*-----------------------------
         Properties Page CSS
@@ -578,9 +597,9 @@ span.price {
 }
 
 /*---------------
-Media Queries for properties page---------Cant make center images on smaller screen sizes-----
+Media Queries for properties page------
 -----------------*/
-
+/*------Need media query for landscape orientation*/
 @media screen and (max-width: 320px) {
   div.listings_container {
     display: flex;
@@ -640,7 +659,7 @@ Media Queries for properties page---------Cant make center images on smaller scr
     font-size: 1em;
   }
 }
-/*------Find out how to media query for horizontal-landscape orientation*/
+
 @media screen and (max-width: 414px) {
   div.listings_container {
     display: flex;
