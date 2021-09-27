@@ -254,8 +254,9 @@ a:active {
     align-items: center;
     font-size: 1.3em;
   }
+
   .logo {
-    width: 80%;
+    width: 100%;
     height: auto;
   }
 
@@ -265,16 +266,15 @@ a:active {
   .introduction_text {
     display: none;
   }
-  .realtor__container {
-    background-color: #618b96;
+
+  div.realtor__container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
+
   .realtor__card {
     font-size: 1em;
   }
+
   .agent_caption {
     display: none;
   }
@@ -314,18 +314,17 @@ a:active {
     font-size: 0.7em;
   }
 }
-
 @media screen and (max-width: 375px) {
   .header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   .logo {
-    width: 75%;
+    width: 100%;
     height: auto;
   }
 
@@ -335,17 +334,15 @@ a:active {
   .introduction_text {
     display: none;
   }
-  .realtor__container {
-    background-color: #618b96;
+
+  div.realtor__container {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    text-align: center;
   }
+
   .realtor__card {
     font-size: 1em;
   }
+
   .agent_caption {
     display: none;
   }
@@ -354,13 +351,12 @@ a:active {
     display: flex;
     font-size: 12px;
     height: 50px;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
-  div.social_links,
-  i {
+  .social_links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   /*media queries for Form Container*/
@@ -387,7 +383,7 @@ a:active {
   }
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (max-width: 414px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -395,8 +391,9 @@ a:active {
     align-items: center;
     font-size: 1.3em;
   }
+
   .logo {
-    width: 80%;
+    width: 100%;
     height: auto;
   }
 
@@ -406,16 +403,16 @@ a:active {
   .introduction_text {
     display: none;
   }
-  .realtor__container {
-    background-color: #618b96;
+
+  div.realtor__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
+
   .realtor__card {
     font-size: 1em;
   }
+
   .agent_caption {
     display: none;
   }
@@ -457,7 +454,7 @@ a:active {
 }
 /*---------MEDIA QUERY ISSUES---------*/
 /*---------Form does not center when contact button is pressed-------*/
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -566,7 +563,7 @@ a:active {
         Properties Page CSS
 ------------------------------*/
 
-div.listings_container {
+.listings_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 30px auto;
