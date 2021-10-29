@@ -1,0 +1,192 @@
+<!--Created by: Harley Strickland--->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>301 Spruce St. Crescent City, FL 32112</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Gotu&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="listing_stylesheet.css" type="text/css" />
+</head>
+
+<body>
+    <header id="home" class="header">
+        <img class="logo" alt="logo" src="images/St.JohnsRealtylogotransparent.png" />
+        <div class="address">
+            <a href="https://g.page/stjohnsrealty?share" target="_blank">386-698-1000<br />
+                220 N. Summit St.<br />
+                Crescent City, FL 32112</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li>
+                <button class="btn-contact" onclick="btnContact()">Contact</button>
+                <div class="popupForm" id="contactPopBackDrop">
+
+                    <form class="form-container" id="contact_form" method="post"
+                        action="https://formspree.io/f/mzbyypvo">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <label for="fname"></label>
+                        <input type="text" id="fname" name="fname" placeholder="Your first name" required />
+                        <label for="lname"></label>
+                        <input type="text" id="lname" name="lname" placeholder="Your last name" />
+                        <label for="email"></label>
+                        <input type="text" id="email" name="_replyto" placeholder="Email" required />
+                        <label for="pnumber"></label>
+                        <input type="text" id="pnumber" name="pnumber" placeholder="Phone number" />
+                        <label for="text_box"></label>
+                        <textarea id="text_box" name="message" rows="4" cols="50" required
+                            placeholder="How can we help you?"></textarea>
+                        <button id="submit_btn">Submit</button>
+                        <script>
+                            var form = document.getElementById("contact_form");
+                            form.addEventListener('submit', handleSubmit)
+
+                            async function handleSubmit(event) {
+                                event.preventDefault();
+                                var data = new FormData(event.target);
+                                fetch(event.target.action, {
+                                    method: form.method,
+                                    body: data,
+                                    headers: {
+                                        'Accept': 'application/json'
+                                    }
+                                }).then(response => {
+
+                                    form.reset()
+                                }).catch(error => {
+
+                                });
+                            }
+
+                            form.addEventListener("submit", handleSubmit);
+
+                        </script>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!---Listing informataion HTML-->
+
+    <div class="listing_info">
+        <figure class="listing_hero_img">
+            <a href="301spruce.html"><img class="property_photos" alt="301_spruce_street"
+                    src="images/property_photos/301_spruce_st/301_SPRUCE_STREET.jpg"></a>
+            <figcaption class="property_address">301 Spruce St. Crescent City,FL 32112 <br><span
+                    class="price">$389,000</span></figcaption>
+        </figure>
+        <p class="listing_description"> Beautiful Lake Stella waterfront home. Dock has covered boat slip and newer boat
+            lift. Shingle roof is approx. 2 years
+            old. One bedroom is a guest room with full bathroom separated by enclosed breezeway for comfort and privacy.
+            Updated
+            kitchen. WHOLE HOUSE Generator (2019) and fireplace are both piped with natural gas. Updated master
+            bathroom. Includes 3
+            parcels that total 0.58 acre.
+            Private Remarks: Owner occupied, please make a showing request in showing time. Listing includes 3 parcel#
+            30-12-28-1820-0180-0080, 30-12-28-1820-0180-0060, 30-12-28-1820-0210-0010.</p>
+    </div>
+
+    <div class="listing_images-container">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_1(1).jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_2.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_3.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_4.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_5.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_6.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_7.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_8.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_9.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_10.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_11.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_12.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_13.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_14.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_15.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_16.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_17.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_18.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_19.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_20.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_21.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_22.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_23.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_24.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_25.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_26.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_27.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_28.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_29.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_30.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_31.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_32.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_33.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_34.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_35.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_36.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_37.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_38.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_39.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_40.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_41.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_42.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_43.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_44.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_45.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_46.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_47.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_48.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_49.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_50.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_51.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_52.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_53.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_54.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_55.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_56.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_57.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_58.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_59.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_60.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_61.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_62.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_63.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_64.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_65.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_66.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_67.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_68.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_69.jpg" alt="301_spruce_street">
+        <img class="listing_img" src="images/property_photos/301_spruce_st/301_SPRUCE_70.jpg" alt="301_spruce_street">
+
+
+    </div>
+
+
+
+    <footer class="footer">
+
+        <div class="social_links">
+            &copy;St.Johns Realty & Management, LLC
+            <a href="https://www.facebook.com/stjohnsrealty" class="social__icon--link" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/st.johnsrealty" class="social__icon--link" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
