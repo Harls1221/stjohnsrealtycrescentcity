@@ -281,14 +281,16 @@ a:active {
 
   .footer {
     display: flex;
-    font-size: 12px;
     height: 50px;
-    justify-content: space-evenly;
   }
 
   .social_links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    font-size: 3.5vw;
+    width: 100%;
+    height: auto;
+    padding: 5%;
   }
 
   /* media queries for pop up window at max-width: 320px*/
@@ -349,14 +351,16 @@ a:active {
 
   .footer {
     display: flex;
-    font-size: 12px;
     height: 50px;
-    justify-content: space-evenly;
   }
 
   .social_links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    font-size: 3.5vw;
+    width: 100%;
+    height: auto;
+    padding: 5%;
   }
 
   /*media queries for Form Container*/
@@ -419,14 +423,16 @@ a:active {
 
   .footer {
     display: flex;
-    font-size: 12px;
     height: 50px;
-    justify-content: space-evenly;
   }
 
   .social_links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    font-size: 3.5vw;
+    width: 100%;
+    height: auto;
+    padding: 5%;
   }
 
   /* media queries for pop up window at max-width: 414px*/
@@ -505,9 +511,7 @@ a:active {
 
   .footer {
     display: flex;
-    font-size: 12px;
     height: 50px;
-    justify-content: space-evenly;
   }
 
   .social_links {
@@ -580,7 +584,6 @@ figure.property_card {
   width: 60%;
   height: auto;
   margin: 20px auto 10px auto;
-  font-size: 1.2em;
 }
 
 .property_photos {
@@ -596,7 +599,6 @@ span.price {
 /*---------------
 Media Queries for properties page------
 -----------------*/
-/*------Need media query for landscape orientation*/
 
 @media screen and (max-width: 320px) {
   .logo {
@@ -618,25 +620,11 @@ Media Queries for properties page------
   figure.property_card {
     width: 100%;
     height: auto;
-    font-size: 1em;
   }
   .property_address {
     width: 80%;
   }
-  .price {
-    font-size: 1em;
-  }
 
-  
-
-  .social_links{
-    display: flex;
-    flex-direction: row;
-  }
-
-  .llc{
-    font-size: 10px;
-  }
   .social__icon--link {
     margin-left: 10%;
   }
@@ -689,7 +677,7 @@ Media Queries for properties page------
   figure.property_card {
     width: 100%;
     height: auto;
-    font-size: 1em;
+    font-size: 1vw;
   }
 
   .property_photos {
@@ -702,7 +690,6 @@ Media Queries for properties page------
   }
 
   .price {
-    font-size: 1em;
   }
 }
 /*
@@ -722,7 +709,7 @@ Media Queries for properties page------
   figure.property_card {
     width: 100%;
     height: auto;
-    font-size: 1em;
+    font-size: 1vw;
   }
 
   .property_photos {
@@ -732,10 +719,6 @@ Media Queries for properties page------
 
   .property_address {
     width: 80%;
-  }
-
-  .price {
-    font-size: 1em;
   }
 }
 
@@ -763,13 +746,12 @@ Media Queries for properties page------
   }
 
   .price {
-    font-size: 1em;
+    font-size: 1vw;
   }
 }
-
+*/
 @media screen and (max-width: 1038px) {
   div.listings_container {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
@@ -787,9 +769,5 @@ Media Queries for properties page------
 
   .property_address {
     width: 80%;
-  }
-
-  .price {
-    font-size: 1em;
   }
 }
