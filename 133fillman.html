@@ -1,0 +1,266 @@
+<!--Created by: Harley Strickland--->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>133 Fillman Lane</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Gotu&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="listing_stylesheet.css" type="text/css" />
+</head>
+
+<body>
+    <header id="home" class="header">
+        <img class="logo" alt="logo" src="images/St.JohnsRealtylogotransparent.png" />
+        <div class="address">
+            <a href="https://g.page/stjohnsrealty?share" target="_blank">386-698-1000<br />
+                220 N. Summit St.<br />
+                Crescent City, FL 32112</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li>
+                <button class="btn-contact" onclick="btnContact()">Contact</button>
+                <div class="popupForm" id="contactPopBackDrop">
+
+                    <form class="form-container" id="contact_form" method="post"
+                        action="https://formspree.io/f/mzbyypvo">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <label for="fname"></label>
+                        <input type="text" id="fname" name="fname" placeholder="Your first name" required />
+                        <label for="lname"></label>
+                        <input type="text" id="lname" name="lname" placeholder="Your last name" />
+                        <label for="email"></label>
+                        <input type="text" id="email" name="_replyto" placeholder="Email" required />
+                        <label for="pnumber"></label>
+                        <input type="text" id="pnumber" name="pnumber" placeholder="Phone number" />
+                        <label for="text_box"></label>
+                        <textarea id="text_box" name="message" rows="4" cols="50" required
+                            placeholder="How can we help you?"></textarea>
+                        <button id="submit_btn">Submit</button>
+                        <script>
+                            var form = document.getElementById("contact_form");
+                            form.addEventListener('submit', handleSubmit)
+
+                            async function handleSubmit(event) {
+                                event.preventDefault();
+                                var data = new FormData(event.target);
+                                fetch(event.target.action, {
+                                    method: form.method,
+                                    body: data,
+                                    headers: {
+                                        'Accept': 'application/json'
+                                    }
+                                }).then(response => {
+
+                                    form.reset()
+                                }).catch(error => {
+
+                                });
+                            }
+
+                            form.addEventListener("submit", handleSubmit);
+
+                        </script>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!---Listing informataion HTML-->
+
+    <div class="listing_info">
+        <figure class="listing_hero_img">
+            <a href="133fillman.html"><img class="property_photos" alt="133_fillman_lane_crescent_city_florida"
+                    src="images/property_photos/133_fillman_lane/133_fillman_lane_52.jpg"></a>
+            <figcaption class="property_address">102 S. Main St. Crescent City,FL 32112 <br><span
+                    class="price">$399,000</span></figcaption>
+        </figure>
+        <p class="listing_description">Waterfront home on Little Lake Como is being offered by the original owner. Brick
+            home with wood burning fireplace. Home
+            sits up on a rolling hill surrounded by the lake, almost like an island. A peaceful retreat with wildlife,
+            large oak
+            trees and magnolia trees. Below the home there is a 26 X 18 basement with a second wood burning fireplace.
+            Metal roof
+            new in 2017. There is a second home on the property and although the location is unbeatable, it is not
+            livable and
+            buyers should use caution if entering. </p>
+    </div>
+
+    <div class="listing_images-container">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_1.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_2.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_3.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_4.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_5.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_6.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_7.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_8.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_9.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_10.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_11.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_12.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_13.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_14.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_15.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_16.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_17.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_18.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_19.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_20.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_21.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_22.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_23.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_24.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_25.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_26.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_27.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_28.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_29.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_30.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_31.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_32.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_33.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_34.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_35.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_36.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_37.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_38.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_39.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_40.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_41.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_42.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_43.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_44.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_45.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_46.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_47.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_48.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_49.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_50.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_51.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_52.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_53.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_54.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_55.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_56.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_57.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_58.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_59.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_60.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_61.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_62.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_63.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_64.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_65.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_66.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_67.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_68.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_69.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_70.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_71.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_72.jpg"
+            alt="133_fillman_lane">
+        <img class="listing_img" src="images/property_photos/133_fillman_lane/133_fillman_lane_73.jpg"
+            alt="133_fillman_lane">
+    </div>
+
+
+
+    <footer class="footer">
+
+        <div class="social_links">
+            &copy;St.Johns Realty & Management, LLC
+            <a href="https://www.facebook.com/stjohnsrealty" class="social__icon--link" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/st.johnsrealty" class="social__icon--link" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
