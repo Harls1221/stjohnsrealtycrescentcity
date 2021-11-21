@@ -1,0 +1,184 @@
+<!--Created by: Harley Strickland--->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>125 Kingfish Rd</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Gotu&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="listing_stylesheet.css" type="text/css" />
+</head>
+
+<body>
+    <header id="home" class="header">
+        <img class="logo" alt="logo" src="images/St.JohnsRealtylogotransparent.png" />
+        <div class="address">
+            <a href="https://g.page/stjohnsrealty?share" target="_blank">386-698-1000<br />
+                220 N. Summit St.<br />
+                Crescent City, FL 32112</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li>
+                <button class="btn-contact" onclick="btnContact()">Contact</button>
+                <div class="popupForm" id="contactPopBackDrop">
+
+                    <form class="form-container" id="contact_form" method="post"
+                        action="https://formspree.io/f/mzbyypvo">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <label for="fname"></label>
+                        <input type="text" id="fname" name="fname" placeholder="Your first name" required />
+                        <label for="lname"></label>
+                        <input type="text" id="lname" name="lname" placeholder="Your last name" />
+                        <label for="email"></label>
+                        <input type="text" id="email" name="_replyto" placeholder="Email" required />
+                        <label for="pnumber"></label>
+                        <input type="text" id="pnumber" name="pnumber" placeholder="Phone number" />
+                        <label for="text_box"></label>
+                        <textarea id="text_box" name="message" rows="4" cols="50" required
+                            placeholder="How can we help you?"></textarea>
+                        <button id="submit_btn">Submit</button>
+                        <script>
+                            var form = document.getElementById("contact_form");
+                            form.addEventListener('submit', handleSubmit)
+
+                            async function handleSubmit(event) {
+                                event.preventDefault();
+                                var data = new FormData(event.target);
+                                fetch(event.target.action, {
+                                    method: form.method,
+                                    body: data,
+                                    headers: {
+                                        'Accept': 'application/json'
+                                    }
+                                }).then(response => {
+
+                                    form.reset()
+                                }).catch(error => {
+
+                                });
+                            }
+
+                            form.addEventListener("submit", handleSubmit);
+
+                        </script>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!---Listing informataion HTML-->
+
+    <div class="listing_info">
+        <figure class="listing_hero_img">
+            <a href="125kingfish.html"><img class="property_photos"
+                    alt="125 Kingfish Rd. Pomona Park, FL 32181 image, listed at $200,000"
+                    src="images/property_photos/125kingfish/125kingfish_thumbnail.JPG"></a>
+            <figcaption class="property_address">125 Kingfish Rd. Pomona Park, FL 32181 <br><span
+                    class="price">$200,000</span></figcaption>
+        </figure>
+        <p class="listing_description" alt="This ranch style home sits on 6.77 acres, Wood burning fireplace and attached garage. 
+            Sunken living room and family/dining room combo. Wood deck with 
+            sliding glass door to let in the light. Water softener system.">
+            This ranch style home sits on 6.77 acres, Wood burning fireplace and
+            attached garage. Sunken living room and
+            family/dining room combo. Wood deck with sliding glass door to let in
+            the light. Water softener system.</p>
+    </div>
+
+    <div class="listing_images-container">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish1.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish2.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish3.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish4.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish5.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish6.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish7.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish8.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish9.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish10.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish11.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish12.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish13.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish14.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish15.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish16.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish17.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish18.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish19.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish20.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish21.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish22.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish23.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish24.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish25.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish26.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish27.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish28.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish29.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish30.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+
+        <img class="listing_img" src="images/property_photos/125kingfish/125kingfish32.JPG"
+            alt="125Kingfish Rd. Pomona Park, FL 32181_image">
+
+
+    </div>
+
+
+
+    <footer class="footer">
+
+        <div class="social_links">
+            &copy;St.Johns Realty & Management, LLC
+            <a href="https://www.facebook.com/stjohnsrealty" class="social__icon--link" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/st.johnsrealty" class="social__icon--link" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
