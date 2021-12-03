@@ -1,0 +1,412 @@
+body {
+    margin: 0;
+    background-color:#0A0E11;
+    overflow-x: hidden;   
+}
+
+.container-main{
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-template-areas:
+                        "header header"
+                         "nav nav"
+                         "section section" 
+                        "footer footer";
+
+    background-color: blueviolet;
+    
+}
+
+header{
+    background-color: blue;
+    
+    height: 450px;
+    margin: auto;
+    grid-area: header;
+    
+  
+}
+
+
+
+section{
+    grid-area: section;
+}
+
+
+header .logo{
+    background-size: 100%;
+    height: auto;
+    position: relative;
+    top: 50px;
+    min-width: 175px;
+    min-height: 175px;
+    max-width: 250px;
+    max-height: 100px;
+
+}
+
+.address{
+    position: relative;
+    top: 75px;
+    text-align: center;
+    height: auto;
+    font-size: 2.5vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blue;
+    margin: 0 auto;
+    padding: 5px;
+
+    
+}
+
+#agents{
+    background-color: #618b96;
+    display: block;
+    text-align: center;
+    margin-top: 35px; 
+    font-family: 'Gotu','Barlow Condensed', sans-serif;
+    height: auto;
+    
+    
+}
+
+
+.agent_caption {
+    width: 50%;
+    color: #e6e6e6;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+
+.agent_photo {
+    margin-top: 8px;
+}
+
+
+
+@media screen and (max-width: 1080px){
+    #agents{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    
+}
+}
+
+@media screen and (max-width: 600px){
+    .agent_caption{
+        display: none;
+
+    }
+}
+
+
+
+
+#contactPopBackDrop{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,.3);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#contactPop{
+    z-index: 1000;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Gotu','Barlow Condensed', sans-serif;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+
+.form{
+    justify-self: center;
+    text-align: center;
+    bottom: 10px;
+    
+}
+
+.parking{
+   font-size: 2.5em;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: #d4d4d4;
+   text-align: center;
+   align-self: center;
+   justify-self: center;
+  
+
+
+    
+}
+
+.price{
+    
+}
+
+
+#contact input {
+    background-color: #94908a;
+    width: 100%;
+    height: 50px;
+    border: 3px solid #ececee;
+    text-align: center;
+    font-size: 1em;
+    
+}
+
+#contact textarea{
+    background-color: #53514d;
+    width: 100%;
+    height: 200px;
+    color: white;
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::placeholder{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Gotu','Barlow Condensed', sans-serif;
+    font-size: 1.5em;
+}
+
+
+
+.thumbnails{
+    background-color:#618b96;
+   
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Gotu','Barlow Condensed', sans-serif;
+    font-size: 1em;
+    color: #ececee;
+    
+    
+    
+}
+
+
+
+
+
+.thumbnails .property_photos{
+    border: solid white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+figcaption{
+    
+}
+
+
+.introduction{
+    background-color: #D9C5AD;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-evenly;
+    text-align: justify;
+    width: 100%;
+    
+    
+}
+
+
+
+.introduction figure img{
+    width: auto;
+    height: auto;
+
+}
+
+.introduction figcaption{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+
+.introduction_text{
+    align-self: center;
+    color: #212625;
+    width: 30%;
+    height: auto;
+    text-align: center;
+    line-height: 2.5em;
+    font-family: 'Gotu','Barlow Condensed', sans-serif;
+    font-size: 1em;
+    height: auto;
+    margin: 0;
+    text-align: justify;
+}
+
+
+
+nav{
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color:red; 
+    margin: auto;
+    padding: 8px;
+    width: 100%;
+    
+    
+   
+    
+
+    
+}
+
+nav ul li{
+    color: #F2C744;
+    list-style-type: none;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'Marmelad', sans-serif;
+    
+    
+
+}
+
+button{
+    border-radius: 20%;
+    color: white;
+    background-color: blue;
+}
+
+.address a:visited{
+    color: blue;
+}
+
+
+
+a:link {
+    color: #F2C744;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #F2C744;
+    text-decoration: none;
+  
+}
+
+/* mouse over link */
+a:hover {
+  color: #F2C744;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #F2C744;
+  
+}
+
+@media screen and (min-width: 400px) and (max-width: 900){
+    .introduction{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen  and (max-width: 1080px) {
+    .introduction_text {
+      font-size: 1vm;
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 906px){
+    .introduction figure img {
+    width: 75%;
+    height: auto;
+    margin: 0px 0px 0px 70px;  
+    
+    
+    
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .introduction figcaption{
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+    }
+}
+
+  
+
+@media screen and (max-width: 1273px) and (min-width:965px){
+    p.introduction_text {
+        font-size: 1vm;
+    } 
+}
+
+
+
+@media screen and (min-width: 900px){
+    .introduction figure img{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    
+    
+    }
+}
+@media screen and (max-width: 700px){
+    .thumbnails {     
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    
+}
+}
+
+@media screen and (max-width: 700px){
+    .thumbnails figure img {     
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    
+    
+}
+}

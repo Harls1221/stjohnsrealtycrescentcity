@@ -75,9 +75,11 @@ nav ul li {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.4);
 }
+
+
 
 .form-container {
   background-color: #dfd5d5;
@@ -102,7 +104,14 @@ input {
   text-align: center;
   font-size: 1em;
   background-color: #0f151a;
+  color: white;
 }
+
+/*
+input:focus{
+  color: white;
+}
+*/
 
 .submit {
   background-color: #618b96;
@@ -204,14 +213,16 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  width: 50%;
   height: auto;
-  font-size: 1.2em;
+  font-size: 2vw;
 }
 
 .social__icon--link {
   color: #f2c744;
+  
 }
+
 
 /*-------------Link Styles-----------------------------*/
 a.address:link {
@@ -272,7 +283,7 @@ a:active {
   }
 
   .realtor__card {
-    font-size: 1em;
+    font-size: 1vw;
   }
 
   .agent_caption {
@@ -281,18 +292,23 @@ a:active {
 
   .footer {
     display: flex;
-    height: 50px;
+    height: 60px;
   }
 
   .social_links {
     display: flex;
-    justify-content: space-evenly;
-    font-size: 3.5vw;
+    justify-content: center;
+    font-size: 5vw;
     width: 100%;
     height: auto;
     padding: 5%;
   }
-
+/*
+  .fa-facebook, .fa-instagram{
+    font-size: 6vw;
+    
+  }
+*/
   /* media queries for pop up window at max-width: 320px*/
 
   .form-container {
@@ -434,6 +450,12 @@ a:active {
     height: auto;
     padding: 5%;
   }
+
+  .fa-facebook, .fa-instagram{
+    font-size: 6vw;
+  }
+
+  
 
   /* media queries for pop up window at max-width: 414px*/
 
@@ -689,8 +711,7 @@ span.price {
     width: 80%;
   }
 
-  .price {
-  }
+  
 }
 /*
   @media screen and (max-width: 768px) {
